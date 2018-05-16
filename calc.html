@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>calculater</title>
+  <style type="text/css">
+    body {
+      background: rgb(226, 149, 125);
+    }
+
+    textarea {
+      background: white;
+      border-color: red;
+      border-radius: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 15px;
+    }
+
+    button {
+      width: 100px;
+      height: 100px;
+      background: wheat;
+      border-radius: 50px;
+      padding: 40px;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      transition: border-radius 3s;
+      margin: 10px;
+      font-size: 50px;
+      color: white;
+
+    }
+
+    button:hover {
+      background: rgb(226, 149, 125);
+    }
+
+    div {
+      width: 500px;
+      text-align: center;
+      float: left;
+      border: 20px;
+      border-color: green;
+    }
+
+    .con {
+      color: rgb(108, 170, 249);
+
+    }
+  </style>
+  <script type="text/javascript">
+    function get(value) {
+      document.getElementById("show").value += value;
+    }
+    document.getElementById("delete").addEventListener("click", function() {
+      document.getElementById("show").value = "";
+    })
+
+    function calculates() {
+      var result = 0;
+      result = document.getElementById("show").value;
+      document.getElementById("show").value = "";
+      document.getElementById("show").value = eval(result);
+    };
+  </script>
+</head>
+
+<body>
+  <div style="width:500px;float:left;"><br />
+  </div>
+  <div style="background:rgba(72, 62, 74, 0.96);border-radius:20px;" draggable="true">
+    <br /><br />
+    <textarea id="show" rows="4" cols="48"></textarea><br /><br />
+    <button class="con" id="delete">C</button><button class="con" value="()" onclick="get(this.value);">()</button><button class="con" value="BAC" onclick="get(this.value);">A</button><button class="con" value="/" onclick="get(this.value);">/</button><br
+    />
+    <button value="7" onclick="get(this.value);">7</button><button value="8" onclick="get(this.value);">8</button><button value="9" onclick="get(this.value);">9</button><button class="con" value="*" onclick="get(this.value);">X</button><br />
+    <button value="4" onclick="get(this.value);">4</button value="5" onclick="get(this.value);"><button>5</button value="6"><button value="6" onclick="get(this.value);">6</button><button class="con" value="-" onclick="get(this.value);">-</button><br />
+    <button id="one" value="1" onclick="get(this.value);">1</button><button id="two" value="2" onclick="get(this.value);">2</button><button value="3" onclick="get(this.value);">3</button><button class="con" value="+" onclick="get(this.value);">+</button><br
+    />
+    <button style="width:200px" value="0" onclick="get(this.value);">0</button><button value="." onclick="get(this.value);">.</button><button value="=" class="con" onclick="calculates()">=</button>
+  </div>
+
+</body>
+
+</html>
