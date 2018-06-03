@@ -1,37 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My website</title>
-<link rel="stylesheet" type="text/css" href="./css/webtest.css" />
+  <style type="text/css">
+img {
+  width:1920px;
+  height: 100px;
+  vertical-align: middle;
+}
+.say{
+  font-size: 30px;
+  font-style: italic;
+  color: wheat;
+  margin-bottom: 3px;
+  float: right;
+}
+p {
+  border-style: solid;
+  border-right: thick double #ff0000;
+  font: 宋体;
+  font-size: 20px;
+  color: green;
+
+}
+
+P:hover {
+  border-color: gold;
+  border-style: solid;
+  color: red;
+}
+  </style>
+  <meta charset="utf-8">
+  <title>Fun-qu sir's web</title>
+  <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+  <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-  <div class="siteNav">
-    <div class="siteNavCon">
-      <ul>
-        <li><a href="#">首页</a></li>
-        <li><a href="http://weibo.com/qusv">微博</a></li>
-        <li><a href="https://www.jianshu.com/u/ccec7c633cfd">简书</a></li>
-        <li><a href="https://github.com/qusirv">github</a></li>
-        <li><a href="https://gitee.com/qujack">gitee</a></li>
-        <li><a href="#">资源</a></li>
-        <li><a href="#">教程</a></li>
-        <li><a href="#">更多……</a>
-          <ul class="siteNavPanel">
-            <li><a href="#">First link in dropdown</a></li>
-            <li><a href="#">Second link in dropdown</a></li>
-            <li class="active"><a href="#">Active link in dropdown</a></li>
-          </ul>
-        </li>
+  <ul class="nav nav-pills">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="http://weibo.com/qusv">微博</a></li>
+    <li><a href="https://www.jianshu.com/u/ccec7c633cfd">简书</a></li>
+    <li><a href="https://github.com/qusirv">Github</a></li>
+    <li><a href="https://gitee.com/qujack">Gitee</a></li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			Java <span class="caret"></span>
+		</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Swing</a></li>
+        <li><a href="#">jMeter</a></li>
+        <li><a href="#">EJB</a></li>
+        <li class="divider"></li>
+        <li><a href="#">分离的链接</a></li>
       </ul>
+    </li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			项目 <span class="caret"></span>
+		</a>
+      <ul class="dropdown-menu">
+        <li><a href="./calc.html">计算器</a></li>
+        <li><a href="#">jMeter</a></li>
+        <li><a href="#">EJB</a></li>
+        <li class="divider"></li>
+        <li><a href="#">分离的链接</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Python</a></li>
+    <li class="say">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们都是阴沟里的虫子，但总还是得有人仰望星空。</li>
+  </ul>
+
+  <div id="myCarousel" class="carousel slide">
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner" style="height:300px;">
+      <div class="item active">
+        <img src="https://oss.static.nubia.cn/gallery/149794525823.jpg" alt="First slide">
+      </div>
+      <div class="item">
+        <img src="https://oss.static.nubia.cn/gallery/149792815018.jpg" alt="Second slide">
+      </div>
+      <div class="item">
+        <img src="https://oss.static.nubia.cn/gallery/149792664942.jpg" alt="Third slide">
+      </div>
     </div>
+    <!-- 轮播（Carousel）导航 -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
   </div>
-  <br /><br /><br /><br /> 
-  <p><a href="./calc.html">计算器</a></p>
-  <div class="one"></div>
+<p> 《做你想做的人》“当一个人改变对事物和其他人的思想时，他会发现，事物和他人也会对他发生改变。。。。如果让一个人从根本上改变他的思想，他就会惊讶地发现这会对他生活的物质环境产生飞速的变化。人们不能吸引他们所要的，却能吸引他们所有的。...形成我们目标的神性在于我们自己。那正是我们的自我。...一个人得到的一切，正是他自己思想的直接结果。.....一个人只有通过提升思想，才能崛起、征服和成功。如果他拒绝提升自己的思想，只能继续衰弱、可怜和痛苦。”</p>
 </body>
 
 </html>
